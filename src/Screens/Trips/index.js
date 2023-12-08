@@ -146,7 +146,7 @@ export const Trips = () => {
 
           <Pressable
             onPress={() => {
-              // Navigation.navigate('Notifications');
+              Navigation.navigate('Notifications');
             }}>
             <View
               style={{

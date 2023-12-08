@@ -18,6 +18,7 @@ import ButtonComp from '../../Components/ReusableComponent/Button';
 import {SignUpPageOfEventsDetail} from '../SignUpPageOfEventsDetail';
 import {PhotosPageOfEventsDetail} from '../PhotosPageOfEventsDetail';
 import {FeedBackPageOfEventsDetail} from '../FeedBackPageOfEventsDetail';
+import {ChatScreen} from '../../Components/ChatScreen';
 // import {ModalView} from '../../Components/ReusableComponent/Modal';
 
 const EventsDetail = () => {
@@ -32,6 +33,9 @@ const EventsDetail = () => {
     useState(false);
 
   const [showFeedBackPageOfEventsDetail, setShowFeedBackPageOfEventsDetail] =
+    useState(false);
+
+  const [showCarPoolPageOfEventsDetail, setShowCarPoolPageOfEventsDetail] =
     useState(false);
 
   const [modal, setModal] = useState(false);
@@ -118,7 +122,7 @@ const EventsDetail = () => {
               backgroundColor: 'white',
               marginHorizontal: 12,
               flex: 1,
-              marginBottom: 40,
+              // marginBottom: 40,
             }}>
             {/* Header */}
             <View
@@ -176,7 +180,8 @@ const EventsDetail = () => {
                   Heading={
                     showSignUpPageOfEventsDetail ||
                     showPhotosPageOfEventsDetail ||
-                    showFeedBackPageOfEventsDetail
+                    showFeedBackPageOfEventsDetail ||
+                    showCarPoolPageOfEventsDetail
                       ? 'Suitch App Team'
                       : 'Event Details'
                   }
@@ -184,7 +189,8 @@ const EventsDetail = () => {
                 />
                 {showSignUpPageOfEventsDetail ||
                 showPhotosPageOfEventsDetail ||
-                showFeedBackPageOfEventsDetail ? (
+                showFeedBackPageOfEventsDetail ||
+                showCarPoolPageOfEventsDetail ? (
                   <Image
                     source={require('../../Assets/Images/EAA/arrow-right.png')}
                     style={{
@@ -257,6 +263,7 @@ const EventsDetail = () => {
                     setShowSignUpPageOfEventsDetail(true);
                     setShowPhotosPageOfEventsDetail(false);
                     setShowFeedBackPageOfEventsDetail(false);
+                    setShowCarPoolPageOfEventsDetail(false);
                   }}>
                   <View
                     style={{
@@ -282,26 +289,45 @@ const EventsDetail = () => {
                     </Text>
                   </View>
                 </Pressable>
-                <View
-                  style={{
-                    alignItems: 'center',
-                    backgroundColor: 'white',
-                    padding: 11,
-                    borderRadius: 16,
-                    borderWidth: 1,
-                    borderColor: '#BBB',
-                    opacity: 5,
-                    marginHorizontal: 5,
+
+                <Pressable
+                  onPress={() => {
+                    setShowCarPoolPageOfEventsDetail(true);
+                    setShowSignUpPageOfEventsDetail(false);
+                    setShowPhotosPageOfEventsDetail(false);
+                    setShowFeedBackPageOfEventsDetail(false);
                   }}>
-                  <Text style={{color: 'black', fontWeight: 'bold'}}>
-                    Car Pool
-                  </Text>
-                </View>
+                  <View
+                    style={{
+                      alignItems: 'center',
+                      backgroundColor: showCarPoolPageOfEventsDetail
+                        ? '#D43D1C'
+                        : 'white',
+                      padding: 11,
+                      borderRadius: 16,
+                      borderWidth: 1,
+                      borderColor: '#BBB',
+                      opacity: 5,
+                      marginHorizontal: 5,
+                    }}>
+                    <Text
+                      style={{
+                        color: showCarPoolPageOfEventsDetail
+                          ? '#FFFFFF'
+                          : 'black',
+                        fontWeight: 'bold',
+                      }}>
+                      Car Pool
+                    </Text>
+                  </View>
+                </Pressable>
+
                 <Pressable
                   onPress={() => {
                     setShowPhotosPageOfEventsDetail(true);
                     setShowFeedBackPageOfEventsDetail(false);
                     setShowSignUpPageOfEventsDetail(false);
+                    setShowCarPoolPageOfEventsDetail(false);
                   }}>
                   <View
                     style={{
@@ -327,11 +353,13 @@ const EventsDetail = () => {
                     </Text>
                   </View>
                 </Pressable>
+
                 <Pressable
                   onPress={() => {
                     setShowFeedBackPageOfEventsDetail(true);
                     setShowPhotosPageOfEventsDetail(false);
                     setShowSignUpPageOfEventsDetail(false);
+                    setShowCarPoolPageOfEventsDetail(false);
                   }}>
                   <View
                     style={{
@@ -364,6 +392,8 @@ const EventsDetail = () => {
               <SignUpPageOfEventsDetail />
             ) : showPhotosPageOfEventsDetail ? (
               <PhotosPageOfEventsDetail />
+            ) : showCarPoolPageOfEventsDetail ? (
+              <ChatScreen height={true}/>
             ) : showFeedBackPageOfEventsDetail ? (
               <FeedBackPageOfEventsDetail />
             ) : (
@@ -1327,11 +1357,8 @@ const EventsDetail = () => {
                     radius={15}
                     txtwidth={'100%'}
                     bgColor={'#D53A1D'}
-                    //   txtColor={COLORS.white}
-                    //   color={isValid ? COLORS.primary : COLORS.border_color}
-                    // enable={!isValid}
                     press={() => {
-                      // Navigation.navigate('login');
+                      Navigation.navigate('GeneralDiscussion');
                       // updatePassword();
                     }}
                     // bgcolor={'#BA7607'}

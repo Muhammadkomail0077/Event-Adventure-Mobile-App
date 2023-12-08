@@ -38,6 +38,7 @@ import {DeleteAccount} from '../../Screens/DeleteAccount';
 import EventsDetail from '../../Screens/EventsDetail';
 import { Trips } from '../../Screens/Trips';
 import JoinEvent from '../../Screens/JoinEvent';
+import { GeneralDiscussion } from '../../Screens/GeneralDiscussion';
 
 export default function StackNavigator({route, navigation}) {
   const Stack = createStackNavigator();
@@ -159,6 +160,7 @@ export default function StackNavigator({route, navigation}) {
             <Stack.Screen name="Trips" component={Trips} />
             <Stack.Screen name="JoinEvent" component={JoinEvent} />
             <Stack.Screen name="Notifications" component={Notifications} />
+            <Stack.Screen name="GeneralDiscussion" component={GeneralDiscussion} />
           </>
         ) : otpScreenBool ? (
           <>
