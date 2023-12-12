@@ -13,7 +13,7 @@ export const ModalView = props => {
 
   // const [modalVisible, setModalVisible] = useState(true);
 
-  let {set, get, cross, txt, no, yes, headtxt} = props;
+  let {set, get, cross, txt, no, yes, headtxt, urlImg} = props;
 
   return (
     <Modal animationType="none" transparent={true} visible={get}>
@@ -25,10 +25,11 @@ export const ModalView = props => {
                 style={{
                   alignContent: 'center',
                   alignItems: 'center',
-                  marginBottom: 10,
+                  marginBottom: 25,
                 }}>
                 <Image
-                  source={require('../../../Assets/Images/EAA/colorcalendar.png')}
+                  // source={require('../../../Assets/Images/EAA/colorcalendar.png')}
+                  source={urlImg}
                   style={{width: 80, height: 80}}
                 />
               </View>
@@ -41,8 +42,9 @@ export const ModalView = props => {
                 Fontweight={600}
                 txtAlign={'center'}
                 color={'black'}
-                lh={32.4}
-                ls={-0.45}
+                // lh={32.4}
+                ls={-0.446}
+                // width={400}
               />
             </View>
           </View>
@@ -58,11 +60,11 @@ export const ModalView = props => {
                 Fontsize={14}
                 ls={-0.45}
                 //   color={COLORS.dark}
-                Fontweight={500}
+                Fontweight={600}
                 txtAlign={'center'}
                 color={'rgba(112, 112, 112, 1)'}
                 lh={20}
-                width={200}
+                // width={200}
               />
             </View>
           )}
@@ -104,7 +106,7 @@ export const ModalView = props => {
                 // borderColor: '',
                 // borderColor: '#0B105C',
                 // padding: 5,
-                marginRight: 5,
+                // marginRight: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: 155,

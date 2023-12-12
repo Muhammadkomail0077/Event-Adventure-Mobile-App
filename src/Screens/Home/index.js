@@ -343,15 +343,24 @@ const Home = () => {
     );
   };
 
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
 
-  useEffect(() => {
-    if (!modalVisible) {
-      const intervalId = setInterval(() => {
-        setModalVisible(true);
-      }, 20000);
-    }
-  });
+  
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setModalVisible(true);
+  //   }, 5000);
+  // }, [])
+
+  // useFocusEffect(
+  //   React.useCallback(() => {
+  //     const intervalId = setInterval(() => {
+  //       setModalVisible(true);
+  //     }, 5000);
+  //   }, []),
+  // );
+  
 
   return (
     <>
@@ -361,6 +370,7 @@ const Home = () => {
         cross={() => setModalVisible(false)}
         // txt={'Are you sure you want to logout ?'}
         headtxt={'There is a Event Nearby Wanna Join?'}
+        urlImg={require('../../Assets/Images/EAA/colorcalendar.png')}
         buttonLeftText={'Cancel'}
         buttonRightText={'Go to Event'}
         no={() => {

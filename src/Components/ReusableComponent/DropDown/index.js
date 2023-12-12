@@ -19,7 +19,7 @@ const DropdownComponent = props => {
           // shadowOpacity: 0.5,
           // shadowRadius: 4,
           // elevation: 2,
-          backgroundColor: '#E4E4E4',
+          backgroundColor: 'rgba(228, 228, 228, 0.5)',
           // width: 352,
           height: 60,
           borderRadius: 20,

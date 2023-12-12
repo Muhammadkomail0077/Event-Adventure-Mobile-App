@@ -16,6 +16,7 @@ export const PhotosPageOfEventsDetail = () => {
             shadowOpacity: 0.1,
             shadowRadius: 5,
             elevation: 5,
+            marginHorizontal: '2%'
           }}>
           <View
             style={{
@@ -25,24 +26,25 @@ export const PhotosPageOfEventsDetail = () => {
             }}>
             <Image
               source={require('../../Assets/Images/EAA/Events.png')}
-              style={{width: 355, height: 261}}
+              style={{width: 335, height: 251}}
               resizeMode="contain"
             />
           </View>
-          <View style={{width: '80%', marginLeft: 15, marginBottom: 5}}>
+          <View style={{width: '80%', marginLeft: 16, marginBottom: 5, marginTop: -10}}>
             <Heading
               Stylefont={'normal'}
-              Fontweight={'bold'}
-              Fontsize={16}
+              Fontweight={500}
+              Fontsize={14}
               Heading={'www.facebook.com/costa-rica-trip'}
               color={'#D43D1C'}
               ls={-0.446}
+              lh={20}
             />
           </View>
-          <View style={{width: '80%', marginLeft: 15,marginBottom:20}}>
+          <View style={{width: '80%', marginLeft: 16,marginBottom:25}}>
             <Heading
               Stylefont={'normal'}
-              Fontweight={'bold'}
+              Fontweight={600}
               Fontsize={18}
               Heading={'Costa Rica Trip and our Vietnam & Cambodia trip'}
               color={'black'}

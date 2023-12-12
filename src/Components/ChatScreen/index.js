@@ -35,12 +35,12 @@ export const ChatScreen = props => {
       message:
         'Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor exercitation.  sed do eiusmod tempor exercitation.',
     },
-    {
-      id: 2,
-      sentBy: 'user',
-      message:
-        'Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor exercitation.  sed do eiusmod tempor exercitation.',
-    },
+    // {
+    //   id: 2,
+    //   sentBy: 'user',
+    //   message:
+    //     'Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor exercitation.  sed do eiusmod tempor exercitation.',
+    // },
   ];
 
   const [messageText, setMessageText] = useState('');
@@ -68,7 +68,7 @@ export const ChatScreen = props => {
                   source={require('../../Assets/Images/EAA/chatprofile.png')}
                   style={{
                     // marginTop: -15,
-                    marginLeft: 15,
+                    // marginLeft: 10,
                     borderRadius: 20,
                   }}
                 />
@@ -91,12 +91,12 @@ export const ChatScreen = props => {
                     Heading={item.message}
                     color={'#707070'}
                     Fontsize={12}
-                    width={284}
+                    width={290}
                     // txtAlign={'left'}
                     p={10}
                     lh={16}
-                    ml={30}
-                    mt={-5}
+                    // ml={30}
+                    mt={-20}
                     mb={8}
                     ls={-0.446}
                     Fontweight={500}
@@ -112,11 +112,12 @@ export const ChatScreen = props => {
                 ls={-0.24}
                 Fontweight={500}
                 lh={16}
+                mt={17}
                 // mr={74}
               />
             </View>
           ) : (
-            <View style={{marginTop: 40}}>
+            <View style={{marginTop: 20}}>
               <View
                 style={{
                   flexDirection: 'row',
@@ -128,12 +129,12 @@ export const ChatScreen = props => {
                   style={{
                     backgroundColor: '#F18473',
                     flex: 1,
-                    marginLeft: 70,
+                    marginLeft: 40,
                     // width: 250,
                     alignItems: 'right',
                     borderRadius: 16,
                     // borderColor: 'white',
-                    borderWidth: 3,
+                    // borderWidth: 3,
                     borderColor:
                       Platform.OS === 'ios'
                         ? 'rgba(0, 0, 0, 0.1)'
@@ -141,23 +142,28 @@ export const ChatScreen = props => {
                     // elevation: 12,
                   }}>
                   <Heading
-                    Fontsize={14}
-                    width={250}
+                    Fontsize={12}
+                    width={290}
                     txtAlign={'left'}
-                    p={10}
+                    p={13}
                     // lh={18}
                     Heading={item.message}
                     color={'#FFFFFF'}
+                    fontWeight={500}
+                    lh={16}
+                    ls={-0.446}
                   />
                 </View>
               </View>
               <Heading
                 Heading={'16 min. ago'}
-                color={'rgba(156, 156, 156, 1)'}
+                color={'black'}
                 Fontsize={12}
-                ml={68}
-                mt={3}
+                ml={41}
+                mt={17}
                 mb={0}
+                fontWeight={500}
+                ls={-0.446}
               />
             </View>
           )}
@@ -174,63 +180,90 @@ export const ChatScreen = props => {
             flex: 1,
             marginHorizontal: 10,
             // backgroundColor:'pink',
-            marginBottom:-110
+            marginBottom: -110,
           }}>
-          <KeyboardAvoidingView
+          {/* <KeyboardAvoidingView
             style={{flex: 1}}
             behavior={Platform.OS === 'ios' ? 'padding' : null}
             // keyboardVerticalOffset={65}
-          >
-            <View style={{flexDirection: 'column'}}>
-              <View style={{maxHeight: props.height ? '83%' : '87%'}}>
-                <FlatList
-                  data={data}
-                  renderItem={renderItem}
-                  contentContainerStyle={{flexGrow: 1}}
-                  showsVerticalScrollIndicator={false}
-                />
-              </View>
+          > */}
+          <View
+            style={{
+              width: '100%',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginBottom: 50,
+            }}>
+            <Heading
+              Stylefont={'normal'}
+              Fontweight={500}
+              Fontsize={14}
+              Heading={'Tuesday, 25 July 2023 - 9:34 pm'}
+              color={'grey'}
+              ls={-0.446}
+              lh={20}
+              txtAlign={'center'}
+              mt={20}
+            />
+          </View>
 
-              <View
-                style={{
-                  marginVertical: 10,
-                  backgroundColor: '#E4E4E4',
-                  marginHorizontal: 15,
-                  padding: 15,
-                  borderRadius: 20,
-                  borderColor: '#BBBBBB',
-                  borderWidth: 1,
-                  justifyContent: 'space-between',
-                  flexDirection: 'row',
-                }}>
-                <TextInput
-                  value={messageText}
-                  onChangeText={setMessageText}
-                  style={{
-                    //   backgroundColor: 'pink',
-                    width: '80%',
-                    color: 'black',
-                    fontSize: 16,
-                    letterSpacing: -0.446,
-                    fontWeight: 500,
-                  }}
-                  placeholder={'Type your Message here...'}
-                  placeholderTextColor={'black'}
-                  editable={true}
-                />
-                <Image
-                  source={require('../../Assets/Images/EAA/sendmessage.png')}
-                  style={{
-                    width: 23,
-                    height: 20,
-                    // marginRight: 1,
-                    // marginTop: 2,
-                  }}
-                  resize
-                />
-              </View>
+          {/* {props.aa? (<View style={{marginTop: 70}}></View>) : null} */}
+          <View style={{flexDirection: 'column'}}>
+            <View
+              style={{
+                maxHeight: props.height ? '100%' : '87%',
+                marginBottom: 30,
+              }}>
+              <FlatList
+                data={data}
+                renderItem={renderItem}
+                contentContainerStyle={{flexGrow: 1}}
+                showsVerticalScrollIndicator={false}
+              />
             </View>
-          </KeyboardAvoidingView>
+
+            <View
+              style={{
+                // marginVertical: 10,
+                // marginTop: 50,
+                // bottom: 5,
+                backgroundColor: 'rgba(228, 228, 228, 0.5)',
+                // marginHorizontal: 10,
+                padding: 15,
+                borderRadius: 20,
+                borderColor: 'rgba(187, 187, 187, 0.5)',
+                borderWidth: 1,
+                justifyContent: 'space-between',
+                flexDirection: 'row',
+              }}>
+              <TextInput
+                value={messageText}
+                onChangeText={setMessageText}
+                style={{
+                  //   backgroundColor: 'pink',
+                  width: '80%',
+                  color: 'rgba(53, 53, 53, 1)',
+                  fontSize: 16,
+                  letterSpacing: -0.446,
+                  fontWeight: 500,
+                }}
+                placeholder={'Type your Message here...'}
+                placeholderTextColor={'black'}
+                editable={false}
+              />
+              <Image
+                source={require('../../Assets/Images/EAA/sendmessage.png')}
+                style={{
+                  width: 23,
+                  height: 20,
+                  // marginRight: 1,
+                  // marginTop: 2,
+                }}
+                resize
+              />
+            </View>
+          </View>
+          {/* </KeyboardAvoidingView> */}
         </View>
         {/* )} */}
       </SafeArea>

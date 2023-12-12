@@ -61,6 +61,7 @@ export const SignUpPageOfEventsDetail = () => {
               style={{
                 flex: 1,
                 justifyContent: 'center',
+                marginTop: -10
               }}>
               <Image
                 source={require('../../Assets/Images/EAA/Ellipse71.png')}
@@ -68,8 +69,8 @@ export const SignUpPageOfEventsDetail = () => {
                 resizeMode="contain"
               />
             </View>
-            <View style={{alignContent: 'center', padding: 20}}>
-              <Text style={{fontWeight: '600', fontSize: 24}}>
+            <View style={{alignContent: 'center', padding: 20, marginBottom: 10}}>
+              <Text style={{fontWeight: '600', fontSize: 24, letterSpacing: -0.446}}>
                 Michael Figueroa
               </Text>
             </View>
@@ -112,7 +113,7 @@ export const SignUpPageOfEventsDetail = () => {
 
       <View style={{flex: 1, marginTop: 5, backgroundColor: 'white'}}>
         {/* Cards */}
-        <View>
+        <View style={{marginHorizontal: '2%'}}>
           <View
             style={{
               backgroundColor: 'white',
@@ -131,15 +132,15 @@ export const SignUpPageOfEventsDetail = () => {
                 marginTop: -15,
               }}>
               <Image
-                source={require('../../Assets/Images/EAA/image2.png')}
-                style={{width: 355, height: 261}}
+                source={require('../../Assets/Images/EAA/eventdetail1.png')}
+                style={{width: 335, height: 251}}
                 resizeMode="contain"
               />
             </View>
             <View style={{width: '80%', marginLeft: 15, marginBottom: 20}}>
               <Heading
                 Stylefont={'normal'}
-                Fontweight={'bold'}
+                Fontweight={600}
                 Fontsize={18}
                 Heading={'Karaoke at Playa Bar!Playa II'}
                 color={'black'}
@@ -179,7 +180,9 @@ export const SignUpPageOfEventsDetail = () => {
                     fontSize: 20,
                     color: 'white',
                     lineHeight: 24,
-                    fontWeight: 'bold',
+                    fontWeight: 600,
+                    lineHeight: 24, /* 120% */
+letterSpacing: -0.446
                   }}>
                   Event Info
                 </Text>
@@ -214,7 +217,8 @@ export const SignUpPageOfEventsDetail = () => {
                     fontSize: 20,
                     color: 'black',
                     lineHeight: 24,
-                    fontWeight: 'bold',
+                    fontWeight: 600, /* 120% */
+letterSpacing: -0.446
                   }}>
                   Event Info
                 </Text>
@@ -228,8 +232,9 @@ export const SignUpPageOfEventsDetail = () => {
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                   marginHorizontal: 15,
-                  marginVertical: 8,
-                  // marginTop: 10,
+                  // marginVertical: 10,
+                  marginTop: 17,
+                  marginBottom: 10
                   // paddingBottom:10
                 }}>
                 <View
@@ -237,8 +242,9 @@ export const SignUpPageOfEventsDetail = () => {
                     flexDirection: 'row',
                     alignContent: 'center',
                     alignItems: 'center',
+                    // marginTop
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>
                     Event Status
                   </Text>
                 </View>
@@ -249,7 +255,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       Event is available
                     </Text>
                   </View>
@@ -271,7 +278,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>
                     Member Status
                   </Text>
                 </View>
@@ -282,7 +289,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       Not Signed Up
                     </Text>
                   </View>
@@ -305,7 +313,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignItems: 'center',
                   }}>
                   <Text
-                    style={{fontSize: 16, color: '#D43D1C', fontWeight: 600}}>
+                    style={{fontSize: 16, color: '#D43D1C', fontWeight: 600, letterSpacing: -0.446}}>
                     Member Guest
                   </Text>
                 </View>
@@ -326,7 +334,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>
                     Sign Up Status
                   </Text>
                 </View>
@@ -337,7 +345,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       You are Signed Up
                     </Text>
                   </View>
@@ -359,7 +368,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>
                     Event Status
                   </Text>
                 </View>
@@ -370,7 +379,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       Event is available
                     </Text>
                   </View>
@@ -392,7 +402,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>Host(s)</Text>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>Host(s)</Text>
                 </View>
                 <View>
                   <Pressable
@@ -409,9 +419,10 @@ export const SignUpPageOfEventsDetail = () => {
                       }}>
                       <Image
                         source={require('../../Assets/Images/EAA/SignupEventOrginzerPic.png')}
-                        style={{width: 28, height: 28}}
+                        style={{width: 32, height: 32}}
                       />
-                      <Text style={{fontSize: 14, color: '#707070'}}>
+                      <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                         {'  '} Michael Figueroa
                       </Text>
                     </View>
@@ -435,7 +446,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignItems: 'center',
                   }}>
                   <Text
-                    style={{fontSize: 16, color: '#D43D1C', fontWeight: 600}}>
+                    style={{fontSize: 16, color: '#D43D1C', fontWeight: 600, letterSpacing: -0.446, marginLeft: 2}}>
                     Event Type
                   </Text>
                 </View>
@@ -456,7 +467,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>Duration</Text>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>Duration</Text>
                 </View>
                 <View>
                   <View
@@ -465,7 +476,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       3 + Hours
                     </Text>
                   </View>
@@ -486,8 +498,9 @@ export const SignUpPageOfEventsDetail = () => {
                     flexDirection: 'row',
                     alignContent: 'center',
                     alignItems: 'center',
+                    marginBottom: 15
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>Attendees</Text>
+                  <Text style={{fontSize: 16, color: 'black',fontWeight: 500, letterSpacing: -0.446}}>Attendees</Text>
                 </View>
                 <View>
                   <View
@@ -496,7 +509,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       No Limit
                     </Text>
                   </View>
@@ -509,7 +523,7 @@ export const SignUpPageOfEventsDetail = () => {
         {/* Event Info Complete */}
         <View
           style={{
-            marginTop: 25,
+            marginTop: 23,
             marginHorizontal: 10,
             borderColor: showSuitchAppTeam ? '#D43D1C' : 'transparent',
             borderWidth: showSuitchAppTeam ? 1 : 0,
@@ -535,7 +549,9 @@ export const SignUpPageOfEventsDetail = () => {
                     fontSize: 20,
                     color: 'white',
                     lineHeight: 24,
-                    fontWeight: 'bold',
+                    fontWeight: 600,
+                    lineHeight: 24, /* 120% */
+letterSpacing: -0.446
                   }}>
                   Suitch App Team
                 </Text>
@@ -570,7 +586,8 @@ export const SignUpPageOfEventsDetail = () => {
                     fontSize: 20,
                     color: 'black',
                     lineHeight: 24,
-                    fontWeight: 'bold',
+                    fontWeight: 600, /* 120% */
+letterSpacing: -0.446
                   }}>
                   Suitch App Team
                 </Text>
@@ -593,8 +610,9 @@ export const SignUpPageOfEventsDetail = () => {
                     flexDirection: 'row',
                     alignContent: 'center',
                     alignItems: 'center',
+                    marginTop: 10
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>Event Cost</Text>
+                  <Text style={{fontSize: 16, color: 'black', fontWeight: 500, letterSpacing: -0.446}}>Event Cost</Text>
                 </View>
                 <View>
                   <View
@@ -602,8 +620,10 @@ export const SignUpPageOfEventsDetail = () => {
                       flexDirection: 'row',
                       alignContent: 'center',
                       alignItems: 'center',
+                      marginTop: 10
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       $0.00 USD
                     </Text>
                   </View>
@@ -625,7 +645,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>Event Tax</Text>
+                  <Text style={{fontSize: 16, color: 'black', fontWeight: 500, letterSpacing: -0.446}}>Event Tax</Text>
                 </View>
                 <View>
                   <View
@@ -634,7 +654,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       $0.00 USD
                     </Text>
                   </View>
@@ -656,7 +677,7 @@ export const SignUpPageOfEventsDetail = () => {
                     alignContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Text style={{fontSize: 16, color: 'black'}}>
+                  <Text style={{fontSize: 16, color: 'black', fontWeight: 500, letterSpacing: -0.446}}>
                     Event Credit
                   </Text>
                 </View>
@@ -667,7 +688,8 @@ export const SignUpPageOfEventsDetail = () => {
                       alignContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{fontSize: 14, color: '#707070'}}>
+                    <Text style={{fontSize: 14, color: '#707070', fontWeight: 500, lineHeight: 20,
+letterSpacing: -0.446}}>
                       $0.00 USD
                     </Text>
                   </View>
@@ -678,7 +700,7 @@ export const SignUpPageOfEventsDetail = () => {
                 style={{
                   flexDirection: 'row',
                   // alignItems: 'center',
-                  marginTop: '2%',
+                  marginTop: '4%',
                   marginHorizontal: 15,
                   paddingBottom: 15,
                   // marginBottom: 20,
@@ -690,8 +712,7 @@ export const SignUpPageOfEventsDetail = () => {
                     // overflow: 'hidden',
                     flexDirection: 'row',
                     // marginHorizontal: 15,
-                    // borderColor: '#D43D1C',
-                    // borderWidth: 1,
+                    borderColor: '#D43D1C',                    // borderWidth: 1,
                   }}>
                   <CheckBox
                     disabled={false}
@@ -704,15 +725,15 @@ export const SignUpPageOfEventsDetail = () => {
                       width: 15, // Set your desired width
                       height: 15, // Set your desired height
                       borderColor: '#D43D1C',
-                      borderWidth: 1,
+                      borderWidth: 0.5,
                     }}
                   />
                 </View>
                 <View
                   style={{
                     width: '95%',
-                    marginLeft: 10,
-                    bottom: 2,
+                    marginLeft: 6,
+                    bottom: 5,
                   }}>
                   <Text
                     style={{
@@ -720,8 +741,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     Event Credit not available Use Event Credit
@@ -732,11 +753,11 @@ export const SignUpPageOfEventsDetail = () => {
               <View
                 style={{
                   marginVertical: 10,
-                  backgroundColor: '#E4E4E4',
-                  marginHorizontal: 15,
+                  backgroundColor: 'rgba(228, 228, 228, 0.5)',
+                  marginHorizontal: 10,
                   padding: 20,
                   borderRadius: 20,
-                  borderColor: '#BBBBBB',
+                  borderColor: 'rgba(187, 187, 187, 0.5)',
                   borderWidth: 1,
                 }}>
                 <TextInput
@@ -759,26 +780,26 @@ export const SignUpPageOfEventsDetail = () => {
                 <View
                   style={{
                     marginVertical: 10,
-                    backgroundColor: '#E4E4E4',
-                    marginHorizontal: 15,
+                    backgroundColor: 'rgba(228, 228, 228, 0.5)',
+                    marginHorizontal: 10,
                     padding: 20,
                     borderRadius: 20,
-                    borderColor: '#BBBBBB',
+                    borderColor: 'rgba(187, 187, 187, 0.5)',
                     borderWidth: 1,
-                    width: '60%',
+                    width: '65%',
                   }}>
                   <TextInput
                     // multiline
                     onChangeText={guest}
                     value={setGuest}
                     style={{
-                      width: '80%',
+                      width: '90%',
                       color: 'black',
                       fontSize: 16,
                       letterSpacing: -0.446,
                       fontWeight: 500,
                     }}
-                    placeholder={'Guest'}
+                    placeholder={'Car Pool'}
                     placeholderTextColor={'black'}
                   />
                 </View>
@@ -798,7 +819,8 @@ export const SignUpPageOfEventsDetail = () => {
                     // marginVertical: '6%',
                     // marginHorizontal: 15,
                   }}>
-                  <Text style={{color: 'white', fontSize: 16, fontWeight: 600}}>
+                  <Text style={{color: 'white', fontSize: 16, fontWeight: 600, lineHeight: 24,
+letterSpacing: -0.446}}>
                     Auto Fill
                   </Text>
                 </View>
@@ -807,11 +829,11 @@ export const SignUpPageOfEventsDetail = () => {
               <View
                 style={{
                   marginVertical: 10,
-                  backgroundColor: '#E4E4E4',
-                  marginHorizontal: 15,
+                  backgroundColor: 'rgba(228, 228, 228, 0.5)',
+                  marginHorizontal: 10,
                   padding: 20,
                   borderRadius: 20,
-                  borderColor: '#BBBBBB',
+                  borderColor: 'rgba(187, 187, 187, 0.5)',
                   borderWidth: 1,
                 }}>
                 <TextInput
@@ -832,7 +854,7 @@ export const SignUpPageOfEventsDetail = () => {
 
               <View style={{margin: 15}}>
                 <Text
-                  style={{color: '#D43D1C', fontWeight: '600', fontSize: 16}}>
+                  style={{color: '#D43D1C', fontWeight: 'bold', fontSize: 16, letterSpacing: -0.446}}>
                   Actions
                 </Text>
               </View>
@@ -875,7 +897,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -883,8 +906,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     I want to signup for the event and I agree to pay the cost
@@ -900,6 +923,7 @@ export const SignUpPageOfEventsDetail = () => {
                   marginTop: '0%',
                   marginHorizontal: 15,
                   paddingBottom: 15,
+                  
                   // marginBottom: 20,
                   // justifyContent: 'space-between',
                 }}>
@@ -931,7 +955,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -939,8 +964,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     I want to be Wait Listed for this event. If I am moved from
@@ -988,7 +1013,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -996,8 +1022,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     I want to cancel my signup for this event.
@@ -1043,7 +1069,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -1051,8 +1078,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     Add my Guest
@@ -1098,7 +1125,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -1106,8 +1134,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     Add my Comment
@@ -1153,7 +1181,8 @@ export const SignUpPageOfEventsDetail = () => {
                   style={{
                     width: '95%',
                     marginLeft: 10,
-                    bottom: 2,
+                    bottom: 5,
+                    width: 300
                   }}>
                   <Text
                     style={{
@@ -1161,8 +1190,8 @@ export const SignUpPageOfEventsDetail = () => {
                       fontSize: 16,
                       fontFamily: 'GeneralSans-Variable',
                       fontStyle: 'normal',
-                      // fontWeight: '500',
-                      // lineHeight: 24, /* 150% */
+                      fontWeight: '500',
+                      lineHeight: 24, /* 150% */
                       letterSpacing: -0.446,
                     }}>
                     Yes, I have read and agree to the waiver and release
@@ -1179,8 +1208,8 @@ export const SignUpPageOfEventsDetail = () => {
             justifyContent: 'center',
             alignContent: 'center',
             flexDirection: 'row',
-            marginVertical: '6%',
-            marginHorizontal: 15,
+            marginVertical: '7.5%',
+            marginHorizontal: 10,
           }}>
           <ButtonComp
             btnwidth={'97%'}

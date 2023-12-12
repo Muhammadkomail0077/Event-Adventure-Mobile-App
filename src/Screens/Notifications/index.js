@@ -14,6 +14,7 @@ import Heading from '../../Components/ReusableComponent/Heading';
 import {useState} from 'react';
 import Head from '../../Components/ReusableComponent/Head';
 import {useNavigation} from '@react-navigation/native';
+import { ModalView } from '../../Components/ReusableComponent/Modal';
 
 export const Notifications = () => {
   const Navigation = useNavigation();
@@ -30,6 +31,8 @@ export const Notifications = () => {
       description: '08 Hours remaining before the event starts',
       time: '05 min ago',
       count: 1,
+      imageType: false
+
     },
     {
       id: 2,
@@ -38,69 +41,94 @@ export const Notifications = () => {
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
+
     },
     {
       id: 3,
-      image: require('../../Assets/Images/EAA/notify3.jpeg'),
+      image: require('../../Assets/Images/EAA/notify4.jpeg'),
       head: 'Jenny Wilson',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
+
     },
     {
       id: 4,
-      image: require('../../Assets/Images/EAA/notify4.jpeg'),
+      image: require('../../Assets/Images/EAA/notify5.jpeg'),
       head: 'Cameron Williamson',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
+
     },
     {
       id: 5,
-      image: require('../../Assets/Images/EAA/notify5.jpeg'),
+      image: require('../../Assets/Images/EAA/notify3.jpeg'),
       head: 'Theresa Webb',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
+
     },
     {
       id: 6,
-      image: require('../../Assets/Images/EAA/notify6.jpeg'),
+      image: require('../../Assets/Images/EAA/notify7.jpeg'),
       head: 'Savannah Nguyen',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
+
     },
     {
       id: 7,
-      image: require('../../Assets/Images/EAA/notify7.jpeg'),
+      image: require('../../Assets/Images/EAA/notify6.jpeg'),
       head: 'Devon Lane',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: false
     },
     {
       id: 8,
-      image: require('../../Assets/Images/EAA/notify1.jpeg'),
+      image: require('../../Assets/Images/EAA/chatprofile11.png'),
       head: 'Box Shelve',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: true
     },
     {
       id: 8,
-      image: require('../../Assets/Images/EAA/notify3.jpeg'),
+      image: require('../../Assets/Images/EAA/chatprofile11.png'),
       head: 'Box Shelve',
       description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor.',
       time: '05 min ago',
       count: 2,
+      imageType: true
+
     },
   ];
 
-  const renderItem = ({item}) => {
-    console.log('item: ',item.image);
+  const handlePress = () => {
+    // Your onPress logic for the first item
+    setModalVisible(true)
+  };
+
+  const handlePress2 = () => {
+    // Your onPress logic for the first item
+    Navigation.navigate('GeneralDiscussion');
+  };
+
+  const renderItem = ({item, index}) => {
+    console.log('item: ', item.image);
     return (
       <>
+            <Pressable onPress={index === 0 ? handlePress : index === 1 ? handlePress2 : index === 2 ? handlePress2 : undefined}>
         <View
           style={{
             flexDirection: 'row',
@@ -108,19 +136,30 @@ export const Notifications = () => {
             borderColor: '#D8D8D8',
             borderRadius: 20,
             borderWidth: 1,
-            marginHorizontal: 15,
+            marginHorizontal: 28,
             // backgroundColor: 'pink',
             alignItems: 'center',
             alignContent: 'center',
             alignSelf: 'center',
             padding: 12,
-            borderWidth:1,
-            borderColor:'#D8D8D8',
-            marginBottom:12
+            borderWidth: 1,
+            borderColor: '#D8D8D8',
+            marginBottom: 18,
           }}>
-            
           <View>
-            <Image
+            {item.imageType ? (<Image
+              source={item?.image}
+              style={{
+                width: 66,
+                height: 70,
+                // alignContent: 'center',
+                // alignItems: 'center',
+                // alignSelf: 'center',
+                marginTop: 3,
+                marginBottom: -8
+                // marginLeft: -5,
+              }}
+            />) : (<Image
               source={item?.image}
               style={{
                 width: 56,
@@ -131,18 +170,19 @@ export const Notifications = () => {
                 // marginTop: -12,
                 // marginLeft: -5,
               }}
-            />
+            />)}
           </View>
 
-          <View style={{marginLeft: 10, width: '60%'}}>
+          <View style={{marginLeft: 10, width: '60%', marginVertical: 3}}>
             <View>
               <Heading
                 Heading={item.head}
-                Fontsize={16}
+                Fontsize={18}
                 color={'black'}
                 Fontweight={500}
                 // txtAlign={'center'}
                 // width={100}
+                lh={24}
               />
             </View>
             <Heading
@@ -157,8 +197,7 @@ export const Notifications = () => {
             />
           </View>
 
-          <View style={{alignItems: 'flex-end'}}>
-
+          <View style={{alignItems: 'flex-end', marginTop: 12}}>
             <View
               style={{
                 backgroundColor: '#D5331D',
@@ -167,7 +206,7 @@ export const Notifications = () => {
                 borderRadius: 30,
                 justifyContent: 'center',
                 alignItems: 'center',
-                top:-10
+                top: -10,
               }}>
               <Heading
                 Heading={item.count}
@@ -175,6 +214,8 @@ export const Notifications = () => {
                 //   color={COLORS.dark}
                 // txtAlign={'center'}
                 color={'#FFFFFF'}
+                Fontweight={421}
+                // lh={16}
                 // mt={5}
                 // ml={10}
               />
@@ -185,11 +226,14 @@ export const Notifications = () => {
               //   color={COLORS.dark}
               txtAlign={'center'}
               color={'#707070'}
-              // mt={5}
+              mt={8}
+              Fontweight={400}
+              lh={18}
               // ml={10}
             />
           </View>
         </View>
+        </Pressable>
       </>
     );
   };
@@ -199,7 +243,8 @@ export const Notifications = () => {
       <>
         <View
           style={{
-            marginBottom: 40,
+            marginBottom: 30,
+            marginTop: 10,
           }}>
           <Head head={'Notifications'} />
         </View>
@@ -209,6 +254,26 @@ export const Notifications = () => {
 
   return (
     <>
+<ModalView
+        set={setModalVisible}
+        get={modalVisible}
+        // cross={() => setModalVisible(false)}
+        // txt={'Are you sure you want to logout ?'}
+        headtxt={'08 Hours remaining before the event starts'}
+        urlImg={require('../../Assets/Images/EAA/modalTimer.png')}
+        buttonLeftText={'Cancel'}
+        buttonRightText={'Yes'}
+        no={() => {
+          setModalVisible(false);
+                    Navigation.navigate('Home');
+        }}
+        yes={() => {
+          setModalVisible(false);
+          Navigation.navigate('EventsDetail');
+        }}
+        icon={'yes'}
+      />
+
       <SafeArea>
         <View>
           <FlatList

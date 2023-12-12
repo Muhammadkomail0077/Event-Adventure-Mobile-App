@@ -36,6 +36,10 @@ export const GetStarted = () => {
   const [loading, setLoading] = useState(false);
   const [valuePass, onChangeTextPass] = useState('');
   const [valueConfirmPass, onChangeTextConfirmPass] = useState('');
+  const [valueEmail, onChangevalueEmail] = useState('');
+  const [valuePhone, onChangevaluePhone] = useState('');
+  const [valuelocation, onChangevaluelocation] = useState('');
+
   const [error, onChangeError] = useState('');
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -164,7 +168,8 @@ export const GetStarted = () => {
                 }}>
                 Stay connected from anywhere with exciting group virtual events.
                 Meet new people at comedy nights, game nights, mixology classes
-                and other fun shared, <Text style={{color: '#D43D1C'}}>ALL ONLINE.</Text>
+                and other fun shared,{' '}
+                <Text style={{color: '#D43D1C'}}>ALL ONLINE.</Text>
               </Text>
 
               {/* <TouchableOpacity onPress={() => handleAllOnlinePress()}>
@@ -192,14 +197,16 @@ export const GetStarted = () => {
             <View
               style={{
                 backgroundColor: '#FFF',
-                width: '102%',
+                width: '100%',
                 borderRadius: 20,
                 alignContent: 'center',
                 alignItems: 'center',
-                height: 147,
+                height: 157,
                 flex: 1,
                 justifyContent: 'center',
-                // marginHorizontal: 17,
+                // marginHorizontal
+                // marginRight: 17,
+                // marginHorizontal: 5,
               }}>
               <View>
                 <Image
@@ -264,7 +271,7 @@ export const GetStarted = () => {
                 alignContent: 'center',
                 alignItems: 'center',
                 marginBottom: 20,
-                marginHorizontal: 10
+                marginHorizontal: 10,
               }}>
               <ButtonComp
                 btnwidth={'97%'}
@@ -319,7 +326,7 @@ export const GetStarted = () => {
                 alignContent: 'center',
                 alignItems: 'center',
                 marginBottom: 17,
-                marginHorizontal: 10
+                marginHorizontal: 10,
               }}>
               <ButtonComp
                 btnwidth={'97%'}
@@ -346,8 +353,7 @@ export const GetStarted = () => {
                 alignContent: 'center',
                 alignItems: 'center',
                 marginBottom: 20,
-                marginHorizontal: 10
-
+                marginHorizontal: 10,
               }}>
               <TransparentButton
                 btnwidth={'97%'}
@@ -432,8 +438,8 @@ export const GetStarted = () => {
                 <Input
                   urlImg={require('../../Assets/Images/EAA/smsBlack.png')}
                   placeholder={'Email'}
-                  value={valueConfirmPass}
-                  onChangeText={onChangeTextConfirmPass}
+                  value={valueEmail}
+                  onChangeText={onChangevalueEmail}
                   bgColor={'rgba(228, 228, 228, 0.5)'}
                   color={'#353535'}
                 />
@@ -443,8 +449,8 @@ export const GetStarted = () => {
                 <Input
                   urlImg={require('../../Assets/Images/EAA/call-calling.png')}
                   placeholder={'Phone Number'}
-                  value={valueConfirmPass}
-                  onChangeText={onChangeTextConfirmPass}
+                  value={valuePhone}
+                  onChangeText={onChangevaluePhone}
                   bgColor={'rgba(228, 228, 228, 0.5)'}
                   color={'#353535'}
                 />
@@ -455,8 +461,8 @@ export const GetStarted = () => {
                   title={'Re-type Password'}
                   urlImg={require('../../Assets/Images/EAA/gps.png')}
                   placeholder={'Home Club'}
-                  value={valueConfirmPass}
-                  onChangeText={onChangeTextConfirmPass}
+                  value={valuelocation}
+                  onChangeText={onChangevaluelocation}
                   bgColor={'rgba(228, 228, 228, 0.5)'}
                   color={'#353535'}
                 />
@@ -723,10 +729,14 @@ export const GetStarted = () => {
 
             <View
               style={{
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                marginHorizontal: 18,
+                // flexDirection: 'row',
+                // flexWrap: 'wrap',
+                // justifyContent: 'center',
+                // marginHorizontal: '4%',
+                alignContent: 'center',
+                alignItems: 'center',
+                // alignSelf: 'center',
+                // backgroundColor:'red'
               }}>
               <FlatList
                 data={datacards}

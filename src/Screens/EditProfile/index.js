@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Alert, FlatList, Image, Pressable, View} from 'react-native';
+import {Alert, FlatList, Image, Pressable, TextInput, View} from 'react-native';
 import COLORS from '../../Assets/Style/Color';
 import Heading from '../../Components/ReusableComponent/Heading';
 import SafeArea from '../../Components/ReusableComponent/Safearea';
@@ -9,7 +9,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {ScrollView} from 'react-native-gesture-handler';
-import {ActivityIndicator, Text, TextInput} from 'react-native-paper';
+import {ActivityIndicator, Text} from 'react-native-paper';
 import Input from '../../Components/ReusableComponent/Input';
 import {Formik} from 'formik';
 import * as yup from 'yup';
@@ -37,6 +37,7 @@ import {
 import Head from '../../Components/ReusableComponent/Head';
 import DropdownComponent from '../../Components/ReusableComponent/DropDown';
 import CheckBox from '@react-native-community/checkbox';
+import SecondInput from '../../Components/ReusableComponent/SecondInput';
 
 export const EditProfile = () => {
   const Navigation = useNavigation();
@@ -322,7 +323,7 @@ export const EditProfile = () => {
             }) => (
               <SafeArea>
                 <ScrollView>
-                  <View style={{marginTop: '0%'}}>
+                  <View style={{marginBottom: 30, marginTop: 10}}>
                     <Head head={'Update Profile'} />
 
                     <View
@@ -330,12 +331,23 @@ export const EditProfile = () => {
                         alignSelf: 'center',
                         marginTop: '8%',
                         marginBottom: '8%',
+                        ...Platform.select({
+                          ios: {
+                            shadowColor: 'rgba(242, 86, 75, 0.32)',
+                            shadowOffset: {width: 0, height: 0},
+                            shadowOpacity: 1,
+                            shadowRadius: 32,
+                          },
+                          android: {
+                            elevation: 32,
+                          },
+                        }),
                       }}>
                       <Image
                         source={require('../../Assets/Images/EAA/profileImage.png')}
                         style={{
-                          width: 140,
-                          height: 140,
+                          width: 104,
+                          height: 104,
                           borderRadius: 75,
                         }}
                       />
@@ -349,10 +361,10 @@ export const EditProfile = () => {
                           position: 'absolute',
                           alignSelf: 'flex-end',
                           backgroundColor: 'white',
-                          marginTop: 100,
-                          // width: 45,
-                          // height: 45,
-                          padding: 5,
+                          marginTop: 70,
+                          width: 40,
+                          height: 40,
+                          padding: 7,
                           alignContent: 'center',
                           alignItems: 'center',
                           borderRadius: 20,
@@ -368,49 +380,49 @@ export const EditProfile = () => {
                         <Image
                           source={require('../../Assets/Images/EAA/camera.png')}
                           style={{
-                            width: 28,
-                            height: 28,
+                            width: 24,
+                            height: 24,
                             // padding: 20,
                           }}
                         />
                       </Pressable>
                     </View>
 
-                    <View style={{marginHorizontal: 15}}>
-                      <View style={{marginVertical: 10}}>
-                        <Input
+                    <View style={{marginHorizontal: 20}}>
+                      <View style={{marginTop: 10, marginBottom: 5}}>
+                        <SecondInput
                           urlImg={require('../../Assets/Images/EAA/profile.png')}
                           placeholder={'First Name'}
                           value={firstname}
                           onChangeText={setFirstname}
-                          bgColor={'#E4E4E4'}
+                          bgColor={'rgba(228, 228, 228, 0.5)'}
                           color={'#353535'}
                         />
                       </View>
 
-                      <View style={{marginVertical: 4}}>
-                        <Input
+                      <View style={{marginVertical: 8}}>
+                        <SecondInput
                           urlImg={require('../../Assets/Images/EAA/profile.png')}
                           placeholder={'Last Name'}
                           value={lastName}
                           onChangeText={setLastName}
-                          bgColor={'#E4E4E4'}
+                          bgColor={'rgba(228, 228, 228, 0.5)'}
                           color={'#353535'}
                         />
                       </View>
 
-                      <View style={{marginVertical: 4}}>
-                        <Input
+                      <View style={{marginVertical: 8}}>
+                        <SecondInput
                           urlImg={require('../../Assets/Images/EAA/calendar2.png')}
                           placeholder={'Date of Birth'}
                           value={dob}
                           onChangeText={setDob}
-                          bgColor={'#E4E4E4'}
+                          bgColor={'rgba(228, 228, 228, 0.5)'}
                           color={'#353535'}
                         />
                       </View>
 
-                      <View style={{marginVertical: 10}}>
+                      <View style={{marginVertical: 8}}>
                         <DropdownComponent
                           data={GenderType}
                           defaultValue={'Select Gender'}
@@ -419,43 +431,43 @@ export const EditProfile = () => {
                         />
                       </View>
 
-                      <View style={{marginVertical: 4}}>
-                        <Input
+                      <View style={{marginVertical: 8}}>
+                        <SecondInput
                           urlImg={require('../../Assets/Images/EAA/location2.png')}
                           placeholder={'Location'}
                           value={location}
                           onChangeText={setLocation}
-                          bgColor={'#E4E4E4'}
+                          bgColor={'rgba(228, 228, 228, 0.5)'}
                           color={'#353535'}
                         />
                       </View>
 
                       <View
                         style={{
-                          marginVertical: 4,
+                          marginVertical: 8,
                           // justifyContent: 'center',
                           flexDirection: 'row',
                           justifyContent: 'space-between',
                         }}>
                         <View style={{width: '48%'}}>
-                          <Input
+                          <SecondInput
                             urlImg={require('../../Assets/Images/EAA/location2.png')}
                             placeholder={'City'}
                             value={city}
                             onChangeText={setCity}
-                            bgColor={'#E4E4E4'}
+                            bgColor={'rgba(228, 228, 228, 0.5)'}
                             color={'#353535'}
                             halfSpace={true}
                           />
                         </View>
 
                         <View style={{width: '48%'}}>
-                          <Input
+                          <SecondInput
                             urlImg={require('../../Assets/Images/EAA/location2.png')}
                             placeholder={'State'}
                             value={state}
                             onChangeText={setState}
-                            bgColor={'#E4E4E4'}
+                            bgColor={'rgba(228, 228, 228, 0.5)'}
                             color={'#353535'}
                             halfSpace={true}
                           />
@@ -467,9 +479,10 @@ export const EditProfile = () => {
                           Heading={'Interests'}
                           Fontsize={18}
                           color={'black'}
-                          // Fontweight={'bold'}
+                          Fontweight={500}
                           lh={40}
                           mv={5}
+                          ml={2}
                           // pv={5}
                         />
                         <Input
@@ -482,13 +495,118 @@ export const EditProfile = () => {
                         />
                       </View>
 
+                      <View
+                        style={{
+                          flexDirection: 'row',
+                          // justifyContent: 'space-between',
+                          marginVertical: 20,
+                        }}>
+                        <View
+                          style={{
+                            borderColor: '#BBBBBB',
+                            borderWidth: 1,
+                            backgroundColor: '#fff',
+                            alignContent: 'center',
+                            alignItems: 'center',
+                            borderRadius: 20,
+                            paddingHorizontal: 16,
+                            paddingVertical: 10,
+                            flexDirection: 'row',
+                            marginRight: 10,
+                          }}>
+                          <Heading
+                            Heading={'Trainer'}
+                            Fontsize={12}
+                            color={'black'}
+                            Fontweight={600}
+                            lh={20}
+                            ls={-0.446}
+                            txtAlign={'center'}
+                          />
+                          <Image
+                            source={require('../../Assets/Images/EAA/close-circle.png')}
+                            style={{
+                              width: 14,
+                              height: 14,
+                              marginLeft: 4,
+                              // borderRadius: 75,
+                            }}
+                          />
+                        </View>
+
+                        <View
+                          style={{
+                            borderColor: '#BBBBBB',
+                            borderWidth: 1,
+                            backgroundColor: '#fff',
+                            alignContent: 'center',
+                            alignItems: 'center',
+                            borderRadius: 20,
+                            paddingHorizontal: 16,
+                            paddingVertical: 10,
+                            flexDirection: 'row',
+                            marginRight: 10,
+                          }}>
+                          <Heading
+                            Heading={'Art'}
+                            Fontsize={12}
+                            color={'black'}
+                            Fontweight={600}
+                            lh={20}
+                            ls={-0.446}
+                            txtAlign={'center'}
+                          />
+                          <Image
+                            source={require('../../Assets/Images/EAA/close-circle.png')}
+                            style={{
+                              width: 14,
+                              height: 14,
+                              marginLeft: 4,
+                              // borderRadius: 75,
+                            }}
+                          />
+                        </View>
+
+                        <View
+                          style={{
+                            borderColor: '#BBBBBB',
+                            borderWidth: 1,
+                            backgroundColor: '#fff',
+                            alignContent: 'center',
+                            alignItems: 'center',
+                            borderRadius: 20,
+                            paddingHorizontal: 16,
+                            paddingVertical: 10,
+                            flexDirection: 'row',
+                          }}>
+                          <Heading
+                            Heading={'Traveling'}
+                            Fontsize={12}
+                            color={'black'}
+                            Fontweight={600}
+                            lh={20}
+                            ls={-0.446}
+                            txtAlign={'center'}
+                          />
+                          <Image
+                            source={require('../../Assets/Images/EAA/close-circle.png')}
+                            style={{
+                              width: 14,
+                              height: 14,
+                              marginLeft: 4,
+                              // borderRadius: 75,
+                            }}
+                          />
+                        </View>
+                      </View>
+
                       <View style={{marginVertical: 4, flex: 1}}>
                         <Heading
                           Heading={'About Me'}
                           Fontsize={18}
                           color={'black'}
-                          // Fontweight={'bold'}
-                          lh={40}
+                          Fontweight={500}
+                          lh={30}
                           // mv={0}
                           // pv={5}
                         />
@@ -506,13 +624,15 @@ export const EditProfile = () => {
                             borderWidth: 1,
                             borderColor: '#ccc',
                             borderRadius: 10,
-                            // padding: 8,
+                            padding: 18,
+                            paddingTop: 15,
                             height: 120,
                             backgroundColor: '#E4E4E4',
                           }}
                           underlineColor="transparent"
                           activeUnderlineColor="transparent"
                           underlineColorAndroid={'transparent'}
+                          editable={false}
                         />
                       </View>
 
@@ -520,7 +640,7 @@ export const EditProfile = () => {
                         style={{
                           flexDirection: 'row',
                           alignItems: 'center',
-                          marginTop: '2%',
+                          marginTop: '4%',
                           // marginHorizontal: 5,
                           // marginBottom: 20,
                           // justifyContent: 'space-between',
@@ -557,7 +677,7 @@ export const EditProfile = () => {
                               fontFamily: 'GeneralSans-Variable',
                               fontStyle: 'normal',
                               fontWeight: '500',
-                              // lineHeight: 24, /* 150% */
+                              lineHeight: 24, /* 150% */
                               letterSpacing: -0.446,
                             }}>
                             {'   '}By continuing you accept our Privacy Policy.

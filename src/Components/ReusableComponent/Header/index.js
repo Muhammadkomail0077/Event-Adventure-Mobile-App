@@ -58,8 +58,7 @@ export const Header = props => {
           onPress={() => {
             props.navigationRight
               ? Navigation.navigate('EditProfile')
-              : null
-              Navigation.navigate('Notifications');
+              : Navigation.navigate('Notifications')
           }}
           // style={{position: 'relative'}}
         >

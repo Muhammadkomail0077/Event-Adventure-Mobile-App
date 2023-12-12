@@ -27,19 +27,20 @@ export const Trips = () => {
                 backgroundColor: 'white',
                 //   marginTop: -15,
               }}>
-              <View
+              {/* <View
                 style={{
                   width: '100%', // Adjust the width of the line as needed
                   height: 1, // Adjust the height of the line as needed
                   backgroundColor: '#E3E5E5', // Set the color with low opacity
                   marginTop: 20, // Adjust the vertical margin as needed
                 }}
-              />
+              /> */}
+              
               <View
                 style={{
                   alignContent: 'center',
                   alignItems: 'center',
-                  marginTop: -20,
+                  // marginTop: -20,/
                 }}>
                 <Image
                   source={
@@ -57,24 +58,25 @@ export const Trips = () => {
               <View
                 style={{
                   width: '90%',
-                  marginLeft: 15,
+                  marginLeft: 5,
                   paddingBottom: 20,
                   marginTop: -20,
                 }}>
                 <Heading
                   Stylefont={'normal'}
-                  Fontweight={'bold'}
-                  Fontsize={18}
+                  Fontweight={700}
+                  Fontsize={16}
                   Heading={
                     'We have our January 2024 Costa Rica Trip and our Vietnam & Cambodia trip in February and so much more!'
                   }
                   color={'black'}
-                  ls={-0.446}
+                  // ls={-0.446}
+                  lh={24}
                 />
               </View>
               <View
                 style={{
-                  marginHorizontal: 15,
+                  marginHorizontal: 5,
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                 }}>
@@ -82,7 +84,20 @@ export const Trips = () => {
                   <Image
                     source={require('../../Assets/Images/EAA/Ellipse75.png')}
                   />
-                  <Text>{'   '}Event Advisor . 4 d</Text>
+                  {/* <Text color={'#707070'}>{'   '}Event Advisor . 4 d</Text> */}
+                  <Heading
+                  Stylefont={'normal'}
+                  Fontweight={500}
+                  Fontsize={12}
+                  Heading={
+                    'Event Advisor . 4 d'
+                  }
+                  color={'#707070'}
+                  ls={-0.446}
+                  lh={20}
+                  ml={6}
+                  mt={-2}
+                />
                 </View>
                 <View>
                   <Image
@@ -91,6 +106,8 @@ export const Trips = () => {
                 </View>
               </View>
             </View>
+            <View style={{borderColor: 'rgba(246, 246, 246, 1)', width: '96%', height: 1, borderWidth: 1, marginTop: 15, marginBottom: 0, marginRight: 'auto',
+              marginLeft: 'auto',}}></View>
           </View>
         </Pressable>
       </>
@@ -174,12 +191,17 @@ export const Trips = () => {
               fontSize: 14,
               lineHeight: 20,
               fontWeight: 500,
+              textAlign: 'justify',
+              letterSpacing: -0.446
             }}>
             Hi Suitch App Team (not an actual signup), we're glad you are here!
             Welcome to Events & Adventures. Head to your calendar to see what
             fun events we have coming up!
           </Text>
         </View>
+
+        <View style={{borderColor: 'rgba(246, 246, 246, 1)', width: '88%', height: 0, borderWidth: 1, marginTop: 15, marginBottom: 0, marginRight: 'auto',
+              marginLeft: 'auto',}}></View>
       </>
     );
   };
@@ -198,6 +220,7 @@ export const Trips = () => {
           // columnWrapperStyle={{}}
           contentContainerStyle={{paddingBottom: 30}}
         />
+        <View style={{marginBottom: 10}}></View>
       </View>
     </>
   );

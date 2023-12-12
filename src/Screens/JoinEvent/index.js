@@ -28,20 +28,22 @@ const JoinEvent = () => {
               alignItems: 'center',
               // marginTop: 35,
               marginBottom: 20,
+              
+              // marginHorizontal: 20
             }}>
             <Image
               source={
                 item.index == 0
-                  ? require('../../Assets/Images/EAA/JoinEvent1.png')
-                  : item.index == 1
                   ? require('../../Assets/Images/EAA/JoinEvent2.png')
+                  : item.index == 1
+                  ? require('../../Assets/Images/EAA/JoinEvent4.png')
                   : item.index == 2
                   ? require('../../Assets/Images/EAA/JoinEvent3.png')
                   : item.index == 3
-                  ? require('../../Assets/Images/EAA/JoinEvent4.png')
-                  : require('../../Assets/Images/EAA/JoinEvent4.png')
+                  ? require('../../Assets/Images/EAA/JoinEvent1.png')
+                  : require('../../Assets/Images/EAA/JoinEvent1.png')
               }
-              style={{width: 382, height: 232}}
+              style={{width: 352, height: 215}}
             />
           </View>
         </Pressable>
@@ -55,9 +57,11 @@ const JoinEvent = () => {
         <View
           style={{
             marginTop: Platform.OS === 'ios' ? 70 : '-5%',
-            marginBottom: 45,
+            marginBottom: 35,
           }}>
           <Head head={'Joined Events'} />
+          <View style={{borderColor: 'rgba(246, 246, 246, 0.5)', width: '88%', height: 1, borderWidth: 1, marginTop: 25, marginBottom: 0, marginRight: 'auto',
+              marginLeft: 'auto',}}></View>
         </View>
       </>
     );

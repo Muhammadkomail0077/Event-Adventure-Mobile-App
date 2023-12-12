@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {
   Image,
+  KeyboardAvoidingView,
   Modal,
   Pressable,
   StyleSheet,
@@ -28,6 +29,7 @@ export const FeedBackPageOfEventsDetail = () => {
               style={{
                 flex: 1,
                 justifyContent: 'center',
+                marginTop: 10
               }}>
               <Image
                 source={require('../../Assets/Images/EAA/timer2.png')}
@@ -35,8 +37,8 @@ export const FeedBackPageOfEventsDetail = () => {
                 resizeMode="contain"
               />
             </View>
-            <View style={{alignContent: 'center'}}>
-              <Text style={{fontWeight: '600', fontSize: 24}}>
+            <View style={{alignContent: 'center', marginBottom:40}}>
+              <Text style={{fontWeight: 600, fontSize: 24,color:'black', letterSpacing: -0.446}}>
                 Feedback Has been Send
               </Text>
             </View>
@@ -46,8 +48,10 @@ export const FeedBackPageOfEventsDetail = () => {
                 justifyContent: 'center',
                 alignContent: 'center',
                 flexDirection: 'row',
-                marginVertical: '6%',
-                marginHorizontal: 15,
+                // marginVertical: '6%',
+                marginBottom: '8%',
+                marginTop: -20,
+                // marginHorizontal: 8,
               }}>
               <ButtonComp
                 btnwidth={'97%'}
@@ -76,6 +80,11 @@ export const FeedBackPageOfEventsDetail = () => {
       </Modal>
 
       <View style={{marginTop: '10%'}}>
+      <KeyboardAvoidingView
+              style={{flex: 1, marginBottom: 40}}
+              behavior={Platform.OS === 'ios' ? 'padding' : null}
+              // keyboardVerticalOffset={65}
+            >
         <View
           style={{
             alignContent: 'center',
@@ -96,12 +105,14 @@ export const FeedBackPageOfEventsDetail = () => {
                 fontWeight: 600,
                 lineHeight: 28,
                 textAlign: 'center',
+                color:'black',
+                letterSpacing: -0.446
               }}>
               HOW WAS YOUR EXPERIENCE WITH THE EVENT?
             </Text>
           </View>
 
-          <View>
+          <View style={{marginTop: 5}}>
             <Image
               source={require('../../Assets/Images/EAA/Bitmap.png')}
               style={{width: 120, height: 120}}
@@ -115,13 +126,16 @@ export const FeedBackPageOfEventsDetail = () => {
               alignContent: 'center',
               alignSelf: 'center',
               justifyContent: 'center',
+              marginTop: 20
             }}>
             <Text
               style={{
                 fontSize: 18,
                 fontWeight: 600,
-                lineHeight: 28,
+                // lineHeight: 28,
                 textAlign: 'center',
+                color:'black',
+                letterSpacing: -0.446
               }}>
               Give A Stars
             </Text>
@@ -129,62 +143,66 @@ export const FeedBackPageOfEventsDetail = () => {
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'space-between',
+              // justifyContent: 'space-between',
               alignContent: 'center',
               alignSelf: 'center',
               alignItems: 'center',
+              marginTop: 20
             }}>
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 6}}
             />
             <Image
               source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              style={{width: 28, height: 50, marginRight: 7}}
             />
             <Image
-              source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              source={require('../../Assets/Images/EAA/startransparent.png')}
+              style={{width: 24, height: 23, marginTop: -6, marginRight: 7}}
             />
             <Image
-              source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              source={require('../../Assets/Images/EAA/startransparent.png')}
+              style={{width: 24, height: 23, marginTop: -6, marginRight: 7}}
             />
             <Image
-              source={require('../../Assets/Images/EAA/StarFilled.png')}
-              style={{width: 35, height: 40}}
+              source={require('../../Assets/Images/EAA/startransparent.png')}
+              style={{width: 24, height: 23, marginTop: -6}}
             />
           </View>
         </View>
 
+        
+
         <View
           style={{
-            marginVertical: 10,
-            backgroundColor: '#E4E4E4',
+            marginTop: 14,
+            marginBottom: 5,
+            backgroundColor: 'rgba(228, 228, 228, 0.5)',
             marginHorizontal: 15,
             padding: 20,
             borderRadius: 20,
-            borderColor: '#BBBBBB',
+            borderColor: 'rgba(187, 187, 187, 0.5)',
             borderWidth: 1,
           }}>
           <TextInput
@@ -205,11 +223,11 @@ export const FeedBackPageOfEventsDetail = () => {
         <View
           style={{
             marginVertical: 10,
-            backgroundColor: '#E4E4E4',
+            backgroundColor: 'rgba(228, 228, 228, 0.5)',
             marginHorizontal: 15,
             padding: 20,
             borderRadius: 20,
-            borderColor: '#BBBBBB',
+            borderColor: 'rgba(187, 187, 187, 0.5)',
             borderWidth: 1,
             //   paddingBottom:100
             height: 150,
@@ -225,11 +243,14 @@ export const FeedBackPageOfEventsDetail = () => {
               fontSize: 16,
               letterSpacing: -0.446,
               fontWeight: 500,
+              lineHeight: 16
+
             }}
             placeholder={'Message'}
             placeholderTextColor={'black'}
           />
         </View>
+
 
         {/* Button General Discussion */}
         <View
@@ -237,8 +258,8 @@ export const FeedBackPageOfEventsDetail = () => {
             justifyContent: 'center',
             alignContent: 'center',
             flexDirection: 'row',
-            marginTop: '6%',
-            marginHorizontal: 15,
+            marginTop: '3.5%',
+            marginHorizontal: 28,
           }}>
           <ButtonComp
             btnwidth={'97%'}
@@ -261,6 +282,8 @@ export const FeedBackPageOfEventsDetail = () => {
             // bgcolor={'#BA7607'}
           />
         </View>
+        </KeyboardAvoidingView>
+
       </View>
     </>
   );
@@ -290,7 +313,7 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     width: '90%',
-    height: '35%',
+    height: '33%',
   },
   button: {
     borderRadius: 20,

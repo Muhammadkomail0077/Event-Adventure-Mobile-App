@@ -11,10 +11,10 @@ const ImageSlider = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const flatListRef = useRef(null);
 
-  const handleImageChange = index => {
-    flatListRef.current.scrollToIndex({index, animated: true});
-    setCurrentIndex(index);
-  };
+  // const handleImageChange = index => {
+  //   flatListRef.current.scrollToIndex({index, animated: true});
+  //   setCurrentIndex(index);
+  // };
 
   // Create a loop effect for infinite scrolling
   // useEffect(() => {
@@ -34,7 +34,7 @@ const ImageSlider = ({images}) => {
           styles.dot,
           index === currentIndex % images.length && styles.activeDot,
         ]}
-        onPress={() => handleImageChange(index)}
+        // onPress={() => handleImageChange(index)}
       />
     );
   };
@@ -52,7 +52,7 @@ const ImageSlider = ({images}) => {
         ref={flatListRef}
         data={extendedImages}
         horizontal
-        pagingEnabled
+        // pagingEnabled
         showsHorizontalScrollIndicator={false}
         keyExtractor={(item, index) => index.toString()}
         renderItem={renderItem}

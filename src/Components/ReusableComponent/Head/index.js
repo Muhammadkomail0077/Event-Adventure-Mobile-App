@@ -61,8 +61,8 @@ function Head(props) {
       <View style={{marginTop: 0}}>
         <Heading
           Stylefont={'normal'}
-          Fontweight={700}
-          Fontsize={18}
+          Fontweight={600}
+          Fontsize={20}
           Heading={props.head}
           color={'#D4271C'}
           lh={24}

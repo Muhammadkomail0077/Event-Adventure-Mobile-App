@@ -65,306 +65,311 @@ export const Drawer = () => {
         source={require('../../Assets/Images/EAA/backgroundImg.png')}
         resizeMode="cover"
         style={{flex: 1}}>
-      <ScrollView style={{flex: 1}}>
-        <View
-          style={{
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            marginHorizontal: 24,
-            // marginTop: Platform.OS === 'ios' ? '18%' : 20,
-            // marginTop: '18%',
-            marginBottom: '5%',
-            marginTop: Platform.OS === 'ios' ? 78 : 20,
-          }}>
+        <ScrollView style={{flex: 1}}>
           <View
             style={{
-              alignSelf: 'center',
-              backgroundColor: 'rgba(233, 151, 141, 1)',
-              width: 40,
-              height: 40,
-              borderColor: 'rgba(255, 255, 255, 1)',
-              borderWidth: 1,
-              borderRadius: 12,
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: -8,
-            }}>
-            <Pressable
-              onPress={() => {
-                Navigation.goBack()
-              }}>
-              <Ionicons name="chevron-back" size={24} color={'white'} />
-            </Pressable>
-          </View>
-          <View
-            style={{
+              justifyContent: 'space-between',
               flexDirection: 'row',
-              // marginTop: 5,
-            }}>
-            <View style={{marginTop: 10}}>
-              <Heading
-                Heading={'John Smith'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                // txtAlign={'center'}
-                txtAlign={'right'}
-                lh={24.3}
-                ls={-0.45}
-              />
-              <Heading
-                Heading={'Hampton Bays, New York 867 Snowbird Lane'}
-                Fontsize={14}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={500}
-                lh={20}
-                width={175}
-                txtAlign={'right'}
-                ls={-0.446}
-              />
-            </View>
-            <View>
-              <Image
-                style={{
-                  width: 80,
-                  height: 80,
-                  marginRight: -15,
-                  marginTop: 10,
-                  marginLeft: 5,
-                }}
-                resizeMode={'contain'}
-                source={require('../../Assets/Images/EAA/profile1.png')}
-              />
-            </View>
-          </View>
-        </View>
-
-        <View
-          style={{
-            borderColor: 'rgba(255, 255, 255, 0.3)',
-            borderWidth: 0.6,
-            width: 345,
-            marginRight: 'auto',
-            marginLeft: 'auto',
-            alignItems: 'center',
-          }}>
-          <View></View>
-        </View>
-
-        <View style={{marginTop: 50, marginLeft: 40}}>
-          <Pressable
-            onPress={() => {
-              Navigation.navigate('Home');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/drawerhome.png')}
-                style={{
-                  width: 20.9,
-                  height: 22,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Home'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{marginTop: '8%', marginLeft: 40}}>
-          <Pressable
-            onPress={() => {
-              Navigation.navigate('Profile');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/drawerprofile.png')}
-                style={{
-                  width: 24,
-                  height: 24,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Profile'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{marginTop: '8%', marginLeft: 40}}>
-          <Pressable 
-            onPress={() => {
-              Navigation.navigate('Home');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/drawercalender.png')}
-                style={{
-                  width: 24,
-                  height: 24,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Event Calendar'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{marginTop: '8%', marginLeft: 40}}>
-          <Pressable
-            onPress={() => {
-              Navigation.navigate('Trips');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/airplane.png')}
-                style={{
-                  width: 24,
-                  height: 24,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Trips'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{marginTop: '8%', marginLeft: 40}}>
-          <Pressable
-            onPress={() => {
-              Navigation.navigate('JoinEvent');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/menu-board.png')}
-                resizeMode={'contain'}
-                style={{
-                  width: 24,
-                  height: 24,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Joined Events'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{marginTop: '8%', marginLeft: 40}}>
-          <Pressable
-            onPress={() => {
-              Navigation.navigate('Settings');
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                source={require('../../Assets/Images/EAA/drawersetting.png')}
-                style={{
-                  width: 24,
-                  height: 24,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignContent: 'center',
-                  alignSelf: 'center',
-                }}
-              />
-              <Heading
-                Heading={'Settings'}
-                Fontsize={18}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24.3}
-                ml={20}
-                // txtAlign={'center'}
-              />
-            </View>
-          </Pressable>
-        </View>
-
-        <View style={{top: 25}}>
-          <Pressable
-            onPress={() => {
-              setModalVisible(true);
-              console.log('working');
+              marginHorizontal: 24,
+              // marginTop: Platform.OS === 'ios' ? '18%' : 20,
+              // marginTop: '18%',
+              marginBottom: '5%',
+              marginTop: Platform.OS === 'ios' ? 78 : 20,
             }}>
             <View
               style={{
-                flexDirection: 'row',
-                top: 175,
-                // right: 18,
-                left: 41,
+                alignSelf: 'center',
+                backgroundColor: 'rgba(233, 151, 141, 1)',
+                width: 40,
+                height: 40,
+                borderColor: 'rgba(255, 255, 255, 1)',
+                borderWidth: 1,
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: -8,
               }}>
-              <Image
-                source={require('../../Assets/Images/EAA/logout.png')}
-                style={{
-                  width: 24,
-                  height: 24,
-                }}
-              />
-              <Heading
-                Heading="Log Out"
-                Fontsize={16}
-                color={'rgba(255, 255, 255, 1)'}
-                Fontweight={600}
-                lh={24}
-                ml={10}
-                ls={-0.446}
-              />
+              <Pressable
+                onPress={() => {
+                  Navigation.goBack();
+                }}>
+                <Ionicons name="chevron-back" size={24} color={'white'} />
+              </Pressable>
             </View>
-          </Pressable>
-        </View>
-      </ScrollView>
+            <View
+              style={{
+                flexDirection: 'row',
+                // marginTop: 5,
+              }}>
+              <View style={{marginTop: 10}}>
+                <Heading
+                  Heading={'John Smith'}
+                  Fontsize={18}
+                  color={'rgba(255, 255, 255, 1)'}
+                  Fontweight={600}
+                  // txtAlign={'center'}
+                  txtAlign={'right'}
+                  lh={24.3}
+                  ls={-0.45}
+                />
+                <Heading
+                  Heading={'Hampton Bays, New York 867 Snowbird Lane'}
+                  Fontsize={14}
+                  color={'rgba(255, 255, 255, 1)'}
+                  Fontweight={500}
+                  lh={20}
+                  width={175}
+                  txtAlign={'right'}
+                  ls={-0.446}
+                />
+              </View>
+              <View>
+                <Image
+                  style={{
+                    width: 80,
+                    height: 80,
+                    marginRight: -15,
+                    marginTop: 10,
+                    marginLeft: 5,
+                  }}
+                  resizeMode={'contain'}
+                  source={require('../../Assets/Images/EAA/profile1.png')}
+                />
+              </View>
+            </View>
+          </View>
+
+          <View
+            style={{
+              borderColor: 'rgba(255, 255, 255, 0.3)',
+              borderWidth: 0.6,
+              width: 345,
+              marginRight: 'auto',
+              marginLeft: 'auto',
+              alignItems: 'center',
+            }}>
+            <View></View>
+          </View>
+
+          <View style={{flexDirection: 'column', justifyContent: 'space-between', height: 700}}>
+            <View>
+              <View style={{marginTop: 50, marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('Home');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/drawerhome.png')}
+                      style={{
+                        width: 20.9,
+                        height: 22,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Home'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+
+              <View style={{marginTop: '8%', marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('Profile');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/drawerprofile.png')}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Profile'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+
+              <View style={{marginTop: '8%', marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('Home');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/drawercalender.png')}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Event Calendar'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+
+              <View style={{marginTop: '8%', marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('Trips');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/airplane.png')}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Trips'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+
+              <View style={{marginTop: '8%', marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('JoinEvent');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/menu-board.png')}
+                      resizeMode={'contain'}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Joined Events'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+
+              <View style={{marginTop: '8%', marginLeft: 40}}>
+                <Pressable
+                  onPress={() => {
+                    Navigation.navigate('Settings');
+                  }}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Image
+                      source={require('../../Assets/Images/EAA/drawersetting.png')}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        alignSelf: 'center',
+                      }}
+                    />
+                    <Heading
+                      Heading={'Settings'}
+                      Fontsize={18}
+                      color={'rgba(255, 255, 255, 1)'}
+                      Fontweight={600}
+                      lh={24.3}
+                      ml={20}
+                      // txtAlign={'center'}
+                    />
+                  </View>
+                </Pressable>
+              </View>
+            </View>
+            {/* <View style={{top: 25}}> */}
+            <View style={{marginBottom: 60}}>
+
+              <Pressable
+                onPress={() => {
+                  setModalVisible(true);
+                  console.log('working');
+                }}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    // top: 175,
+                    // right: 18,
+                    left: 41,
+                  }}>
+                  <Image
+                    source={require('../../Assets/Images/EAA/logout.png')}
+                    style={{
+                      width: 24,
+                      height: 24,
+                    }}
+                  />
+                  <Heading
+                    Heading="Log Out"
+                    Fontsize={16}
+                    color={'rgba(255, 255, 255, 1)'}
+                    Fontweight={600}
+                    lh={24}
+                    ml={10}
+                    ls={-0.446}
+                  />
+                </View>
+              </Pressable>
+            </View>
+          </View>
+        </ScrollView>
       </ImageBackground>
     </>
   );
